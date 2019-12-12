@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 
+from __future__ import absolute_import
 import sys
 import os
 import logging
@@ -10,7 +11,7 @@ log = logging.getLogger('nose.plugins.nose_exclude')
 if sys.version_info > (3,):
     get_method_class = lambda x: x.__self__.__class__
 else:
-    get_method_class = lambda x: x.im_class
+    get_method_class = lambda x: x.__self__.__class__
 
 
 class NoseExclude(Plugin):

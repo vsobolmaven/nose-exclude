@@ -1,4 +1,5 @@
 # Multiprocessing handling to avoid atexit test runner failure
+from __future__ import absolute_import
 try:
     import multiprocessing
 except ImportError:
@@ -28,6 +29,8 @@ setup(
          "Public License (LGPL)"),
         "Topic :: Software Development :: Testing",
         "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
         ],
 
     py_modules=['nose_exclude'],
